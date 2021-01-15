@@ -5,7 +5,7 @@ import jira
 from google.cloud import secretmanager
 
 JIRA_URL = 'https://uplightinc.atlassian.net'
-CHRIS_ACCOUNT_ID = '5f7b9de06029960076d87bee'
+WILL_ACCOUNT_ID =  '5ff48404849d6401113fd0ef'
 BLAKE_ACCOUNT_ID = '5fa17d950eb8b4006965ae49'
 USERNAME = 'blake.luther@uplight.com'
 TASK_DESC = '''Vulnerability Scan Review Procedure
@@ -35,7 +35,7 @@ def JIRA_vuln_scan_ticket(inc_request):
         'summary': 'Weekly network vulnerability scan handling',
         'description': TASK_DESC,
         'issuetype': {'name': 'Task'},
-        'assignee': {'accountId': CHRIS_ACCOUNT_ID}
+        'assignee': {'accountId': WILL_ACCOUNT_ID}
     }
     new_issue = jcon.create_issue(fields=issue)
     return "Done :)"
